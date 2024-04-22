@@ -1,0 +1,44 @@
+/*App*/
+h1{
+  text-align: center;
+}
+
+.box-div{
+  display: flex;
+}
+
+/*DataTable*/
+table{
+  text-align: center;
+  margin: auto;
+}
+
+th{
+  background-color: #bbbbbb;
+  width: 10em;
+}
+
+.filter-box{
+  width: 10em;    
+  text-align: center;
+  border: 1px solid black;
+  height: 26em;            
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;           
+}
+
+li{
+  display: inline-grid;
+}
+
+p{
+  font-weight: bold;   
+}
+
+label{
+  margin-bottom: 15px;
+}
+
