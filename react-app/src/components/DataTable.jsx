@@ -31,16 +31,17 @@ function DataTable (props) {
             <h2>Filter</h2>
             <p>Year</p>
             <ul>
-                <li>
+               
                 {years.map((year) => {
                     return(
+                    <li key={year}>
                     <label >
-                    <input type="checkbox" value={[year]} onChange={handleCheckboxFilter}/>
-                    { year }
-                    </label>
+                        <input type="checkbox" value={year} onChange={handleCheckboxFilter}/>
+                        { year }
+                        </label>
+                    </li>
                     )
-                })}
-                </li>
+                })} 
             </ul> 
         </div>
         
