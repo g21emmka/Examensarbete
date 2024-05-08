@@ -47,7 +47,7 @@ const filterData = computed ( () => {
             <h2> Filter</h2>
             <p>Year</p>
             <ul>
-                <li v-for="(year, index) in years"> 
+                <li v-for="year in years" :key="year"> 
                     <input type="checkbox" :value="year"  @change="handleCheckboxFilter">  
                     <label> {{ year }}</label>
                 </li>
@@ -70,7 +70,7 @@ const filterData = computed ( () => {
                 </tr>
             </thead>
             <tbody>
-                <tr  v-for="data in filterData" > 
+                <tr  v-for="data in filterData" :key="data.id"> 
                     <td>{{ data.year }}</td>
                     <td> {{ data.month}} </td>
                     <td> {{ data.date }}</td>
