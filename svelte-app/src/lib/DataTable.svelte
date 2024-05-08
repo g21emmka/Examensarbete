@@ -32,8 +32,10 @@ function handleCheckboxFilter(e) {
         <ul>
             <li> 
                 {#each years as year}
-                <input id ="checkbox" type="checkbox" value= {year} on:change={handleCheckboxFilter}>  
-                <label for="checkbox">{year} </label>
+                <label>
+                    <input  type="checkbox" value= {year} on:change={handleCheckboxFilter}>  
+                    {year} 
+                </label>
                 {/each}
             </li>
         </ul>
