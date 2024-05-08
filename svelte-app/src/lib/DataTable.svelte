@@ -30,14 +30,14 @@ function handleCheckboxFilter(e) {
         <h2> Filter</h2>
         <p>Year</p>
         <ul>
+            {#each years as year (year)}
             <li> 
-                {#each years as year}
                 <label>
                     <input  type="checkbox" value= {year} on:change={handleCheckboxFilter}>  
                     {year} 
                 </label>
-                {/each}
             </li>
+            {/each}
         </ul>
     </div>
 
@@ -57,7 +57,7 @@ function handleCheckboxFilter(e) {
         </tr>
     </thead>
     <tbody>
-        {#each filterData as data}
+        {#each filterData as data (data.id)}
         <tr > 
             <td >{data.year}</td>
             <td >{data.month}</td>
