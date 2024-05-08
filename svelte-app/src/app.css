@@ -31,14 +31,10 @@ ul {
 }
 
 li{
-  display: inline-grid;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 p{
   font-weight: bold;   
 }
-
-label{
-  margin-bottom: 15px;
-}
-
