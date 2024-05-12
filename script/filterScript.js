@@ -14,7 +14,7 @@
     'use strict';
 
     //variable that holds the number of times the script should be run
-    var counter = 100;
+    var counter = 1000;
 
     //String that holds the values of the years that has been checked from the checkboxes
     var checkedYears = '';
@@ -80,18 +80,16 @@
         return array;
     }
 
-    function selectCheckboxesRandomly() {
-        console.log('run')
+     function selectCheckboxesRandomly() {
 
         // Select all checkboxes created from the same input
         const checkboxes = Array.from(document.querySelectorAll('input[type="checkbox"]'));
-        console.log(checkboxes)
 
         // Shuffle the array of checkboxes
         const randomizeCheckboxes = shuffleArray(checkboxes);
 
         // Check the first (whatever number that is chosen, in this case 2) checkboxes from the shuffled array
-        for (let i = 0; i < Math.min( randomizeCheckboxes.length, 2); i++) { 
+        for (let i = 0; i < Math.min( randomizeCheckboxes.length, 2); i++) {
             randomizeCheckboxes[i].click();
 
             //Puts the value of the checked checkboxes inside a string
@@ -99,7 +97,7 @@
         }
     }
 
-    function uncheckCheckboxes() {
+     function uncheckCheckboxes() {
         const checkboxes = document.querySelectorAll('input[type="checkbox"]');
         checkboxes.forEach(checkbox => {
             if (checkbox.checked) {
@@ -120,7 +118,9 @@
     }
 
     window.addEventListener('load', function(){
-        script();
+        setTimeout(() => {
+           script();
+        }, 2000);
     });
 
 })();
