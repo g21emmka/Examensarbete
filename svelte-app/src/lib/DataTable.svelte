@@ -1,5 +1,4 @@
 <script>
-
 export let weatherData
 
 //Creates a new array with unique values of the years in the weatherData array 
@@ -20,11 +19,9 @@ function handleCheckboxFilter(e) {
 
  //The table will update its's data depending on the checkbox filtering  
   $:filterData = dataFilter.length > 0 ? weatherData.filter(data  => dataFilter.includes(data.year)) : weatherData;
-
 </script>
 
 <div class="box-div">
-  
     <!-- List of filters-->
     <div class="filter-box">  
         <h2> Filter</h2>
@@ -40,7 +37,6 @@ function handleCheckboxFilter(e) {
             {/each}
         </ul>
     </div>
-
     <!-- Data table -->
     <table>
     <thead>

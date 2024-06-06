@@ -1,5 +1,4 @@
 <script setup>
-
 import {computed, ref} from "vue"; 
 
 // Defines the props for the component 
@@ -36,12 +35,10 @@ const filterData = computed ( () => {
     }
    return weatherData;
 });                                        
-
 </script>
 
 <template>
-    <div class="box-div">
-        
+    <div class="box-div">  
         <!-- List of filters-->
         <div class="filter-box">  
             <h2> Filter</h2>
@@ -53,7 +50,6 @@ const filterData = computed ( () => {
                 </li>
             </ul>
         </div>
-
         <!-- Data table -->
         <table>
             <thead>

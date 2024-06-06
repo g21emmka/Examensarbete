@@ -25,26 +25,23 @@ function DataTable (props) {
 
     return(
         <div className="box-div"> 
-        
         {/*List of filters*/}
         <div className="filter-box">
             <h2>Filter</h2>
             <p>Year</p>
             <ul>
-               
                 {years.map((year) => {
                     return(
-                    <li key={year}>
-                    <label >
-                        <input type="checkbox" value={year} onChange={handleCheckboxFilter}/>
-                        { year }
-                        </label>
-                    </li>
+                        <li key={year}>
+                            <label>
+                                <input type="checkbox" value={year} onChange={handleCheckboxFilter}/>
+                            { year }
+                            </label>
+                        </li>
                     )
                 })} 
             </ul> 
         </div>
-        
         {/* Data table */}
         <table>
             <thead>
